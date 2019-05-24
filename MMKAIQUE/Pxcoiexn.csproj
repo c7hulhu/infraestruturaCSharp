@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{423923AE-1129-4BAF-B278-2508E74A35CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pxcoiexn</RootNamespace>
+    <AssemblyName>Pxcoiexn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\Pxcoiexn_AplicacaoDados.cs" />
+    <Compile Include="BD\Pxcoiexn_ConstrutorSql.cs" />
+    <Compile Include="BD\Pxcoiexn_Access.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_BancoDadosException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_ChaveEstrangeiraInexistenteException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_ChaveEstrangeiraReferenciadaException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_MensagemInvalidaException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_MultiplosRegistrosException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_RegistroDuplicadoException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_ViolacaoArquiteturalException.cs" />
+    <Compile Include="EXCECAO\Pxcoiexn_ViolacaoBDException.cs" />
+    <Compile Include="ICampo.cs" />
+    <Compile Include="ICampoT.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_CampoObrigatorioMensagem.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_ChaveEstrangeiraInexistenteMensagem.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_ChaveEstrangeiraReferenciadaMensagem.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_Mensagem.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_OperacaoRealizadaMensagem.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_RegistroDuplicadoMensagem.cs" />
+    <Compile Include="MENSAGEM\Pxcoiexn_RegistroInexistenteMensagem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pxcoiexn_Aplicacao.cs" />
+    <Compile Include="TABELA\Pxcoiexn_CampoObrigatorio.cs" />
+    <Compile Include="TABELA\Pxcoiexn_CampoOpcional.cs" />
+    <Compile Include="TABELA\Pxcoiexn_CampoTabelaAttribute.cs" />
+    <Compile Include="Pxcoiexn_CharEnumAttribute.cs" />
+    <Compile Include="Pxcoiexn_ConverteXml.cs" />
+    <Compile Include="Pxcoiexn_Formatador.cs" />
+    <Compile Include="Pxcoiexn_Infra.cs" />
+    <Compile Include="Pxcoiexn_Retorno.cs" />
+    <Compile Include="Pxcoiexn_RetornoT.cs" />
+    <Compile Include="RN\Pxcoiexn_AplicacaoRegraNegocio.cs" />
+    <Compile Include="RN\Pxcoiexn_EscopoTransacional.cs" />
+    <Compile Include="TABELA\Pxcoiexn_Campo.cs" />
+    <Compile Include="TABELA\Pxcoiexn_Linha.cs" />
+    <Compile Include="TABELA\Pxcoiexn_TOTabela.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="INTERFACE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
